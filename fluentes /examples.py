@@ -1,4 +1,4 @@
-from esqb import QueryBuilder
+from fluentes import QueryBuilder
 import json
 
 def main():
