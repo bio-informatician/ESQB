@@ -1,5 +1,5 @@
 import unittest
-from esqb import QueryBuilder
+from fluentes import QueryBuilder
 
 class QueryBuilderTests(unittest.TestCase):
     def test_basic_match_and_term(self):
