@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "esqb"               
+version = "0.1.0"
+description = "Fluent Elasticsearch Query Builder"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Shahram Saghaei", email = "shahram4dev@gmail.com"},
+]
+keywords = ["elasticsearch", "query", "builder", "dsl"]
+
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/bio-informatician/"
