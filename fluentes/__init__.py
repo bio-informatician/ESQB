@@ -1,5 +1,5 @@
 """
-ESQB - Elasticsearch Query Builder
+FluentES - Elasticsearch Fluent Query Builder
 ----------------------------------
 
 Usage:
