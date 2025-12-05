@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "esqb"               
+name = "fluentes"               
 version = "0.1.0"
 description = "Fluent Elasticsearch Query Builder"
 readme = "README.md"
