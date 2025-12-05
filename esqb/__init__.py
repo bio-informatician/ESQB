@@ -3,18 +3,18 @@ ESQB - Elasticsearch Query Builder
 ----------------------------------
 
 Usage:
-
-    from esqb import QueryBuilder, Match, Term, Range, Bool
-
-    query = QueryBuilder.boolean(
-        must=[Match("title", "python")],
-        filter=[Term("status", "active")]
+    qb = QueryBuilder()
+    q = (
+        qb.match("title", "python", occurrence="must")
+          .term("status", "active", occurrence="filter")
+          .range("published", gte="2020-01-01", occurrence="must")
+          .geo_distance("location", lat=52.52, lon=13.405, distance="50km", occurrence="filter")
+          .aggregation("top_tags", "terms", field="tags", size=5)
+          .build()
     )
-    print(query.to_dict())
 """
 
-# Import main classes from query_builder
-from .query_builder import QueryBuilder, Match, Term, Range, Bool
+# expose the builder at package level
+from .query_builder import QueryBuilder
 
-# Define public API
-__all__ = ["QueryBuilder", "Match", "Term", "Range", "Bool"]
+__all__ = ["QueryBuilder"]
